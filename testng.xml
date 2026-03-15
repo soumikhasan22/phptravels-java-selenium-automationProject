@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PHP Travels Suite" verbose="1" parallel="false">
+
+    <listeners>
+        <listener class-name="org.testng.reporters.SuiteHTMLReporter"/>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+    </listeners>
+
+    <test name="All TestCases" preserve-order="true">
+        <classes>
+            <class name="TestCases.TestCases">
+                <methods>
+                    <include name="HomepageTest"/>
+                    <include name="testSignUp"/>
+                    <include name="testLogin"/>
+                    <include name="testVisa"/>
+                    <include name="testTour"/>
+                    <include name="testCar"/>
+                    <include name="testFlight"/>
+                    <include name="testStay"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
